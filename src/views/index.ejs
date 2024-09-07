@@ -1,24 +1,35 @@
-<%- include('includes/head'); %>
+<%- include('includes/head') %>
+<%- include('includes/nav') %>
+  
+<div class="container">
+  <div class="row">
+    <div class="col-lg-2"></div>
 
-<section class="container">
-  <h1>
-    <% numeros.forEach(num => { %> <%= num %> <br />
-    <% }); %>
+    <div class="col-lg-8 my-3">
+      <h1 class="text-center">Agenda</h1>
+      <p class="text-center lead">Seus contatos estão abaixo:</p>
 
-    <!-- <% if(typeof titulo !== 'undefined') {%>
-      <%= titulo %>
-      <% } else { %>
-      O título não foi enviado
-      <% } %> -->
-  </h1>
+      <div class="row">
+        <div class="col my-3">
+          <div class="alert alert-danger">Um erro qualquer</div>
+        </div>
+      </div>
 
-  <form action="/" method="post">
-    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
-    <label> <%= umaVariavelLocal %> </label>
-    <input type="text" name="cliente" />
+      <div class="responsive-table">
+        <table class="table my-3">
+          <tr>
+            <td>Jader</td>
+            <td>Moura</td>
+            <td>11 99177-98558</td>
+            <td>jader@jader.com</td>
+          </tr>
+        </table>
+      </div>
 
-    <button>Enviar</button>
-  </form>
-</section>
+    </div>
+    
+    <div class="col-lg-2"></div>
+  </div>
+</div>
 
-<%- include('includes/footer'); %>
+<%- include('includes/footer') %>
